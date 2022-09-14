@@ -14,6 +14,8 @@ font-family: 'Roboto', sans-serif;
   --footer-contacts: rgba(255, 255, 255, 0.6);
   --button-portfolio-background: #f5f4fa;
   --button-hero-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --button-port-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   --team-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -39,6 +41,14 @@ p {
   padding: 0;
 }
 
+.page-header {
+  max-width: 100%;
+  min-height: 80px;
+
+  background-color: var(--primary-white-color);
+  border-bottom: 1px solid #ececec;
+}
+
 .container {
   max-width: 1200px;
   padding-right: 15px;
@@ -47,8 +57,8 @@ p {
   margin-right: auto;
 }
 .section {
-  /* padding-top: 22px; */
-  padding-bottom: 44px;
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
 .main-nav {
   display: flex;
@@ -70,6 +80,11 @@ p {
 }
 .contact-nav .item + .item {
   margin-left: 50px;
+}
+
+.link {
+  text-decoration: none;
+  /* color: inherit; */
 }
 
 .site-nav .link {
@@ -176,7 +191,7 @@ footer .logo-studio {
 
 /*--------------------------hero-----------------------------*/
 .hero {
-  margin-bottom: 44px;
+  /* margin-bottom: 44px; */
   background-color: var(--footer-background);
   padding-top: 200px;
   padding-bottom: 200px;
@@ -236,6 +251,10 @@ footer .logo-studio {
   margin-left: 30px;
 }
 
+.features .item {
+  max-width: 270px;
+}
+
 .features-titel {
   margin-top: 0;
   margin-bottom: 10px;
@@ -261,7 +280,6 @@ footer .logo-studio {
   margin-left: 30px;
 }
 .work-title {
-  /* margin-top: 94px; */
   margin-bottom: 50px;
   color: var(--title-text-color);
   font-weight: 700;
@@ -300,7 +318,6 @@ footer .logo-studio {
 }
 
 .team-title {
-  padding-top: 94px;
   margin-bottom: 50px;
   color: var(--title-text-color);
   font-weight: 700;
@@ -329,10 +346,28 @@ footer .logo-studio {
   background-color: var(--primary-white-color);
 }
 
-/* портфолио */
+/* -------------------портфолио кнопки----------------------------------*/
 
 /*фильтр*/
-.filter button {
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.button-filter {
+  display: block;
+  min-width: 73px;
+  padding: 6px 22px;
+  border-radius: 4px;
+}
+
+.filter .button {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -343,14 +378,43 @@ footer .logo-studio {
   letter-spacing: 0.03em;
 }
 
-.filter button:focus,
-.filter button:hover {
+.filter .button:focus,
+.filter .button:hover .filter .button:active {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   cursor: pointer;
+  box-shadow: var(--button-port-shadow);
+}
+/* -------------портфолио карточки-------------- */
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.work-name {
+.work-item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.work-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.work-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.work-img {
+  display: block;
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.work-titel {
+  margin-top: 0;
+  margin-bottom: 4px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -359,10 +423,23 @@ footer .logo-studio {
 }
 
 .work-filter {
+  margin-top: 0;
+  margin-bottom: 0;
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+}
+
+.work-blok {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .visually-hidden {
