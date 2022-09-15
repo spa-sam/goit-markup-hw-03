@@ -56,10 +56,10 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-.section {
-  padding-top: 22px;
-  padding-bottom: 22px;
-}
+/* .section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+} */
 .main-nav {
   display: flex;
   align-items: center;
@@ -152,18 +152,20 @@ p {
 
 /*-----------------футер----------------------------------*/
 
-.page-footer .container {
+/* .page-footer .container {
   display: flex;
   flex-direction: column;
   align-items: baseline;
 
   padding-top: 60px;
   padding-bottom: 60px;
-}
+} */
 
 .page-footer {
   background: var(--footer-background);
   font-family: inherit;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-logo {
@@ -244,6 +246,10 @@ footer .logo-studio {
   box-shadow: var(--button-hero-shadow);
 }
 /* ----------------------features----------------------- */
+.features-section {
+  padding: 94px 0;
+}
+
 .features {
   display: flex;
 }
@@ -273,6 +279,10 @@ footer .logo-studio {
 }
 
 /* ----------------------Чим ми займаємося -------------*/
+.work-section {
+  padding-bottom: 94px;
+}
+
 .work {
   display: flex;
 }
@@ -290,9 +300,14 @@ footer .logo-studio {
 }
 
 /* ----------------наша команда--------------------- */
+.team-section {
+  padding: 94px 0;
+}
 
 .team {
   display: flex;
+}
+.team-bckg {
   background-color: #f5f4fa;
 }
 
@@ -313,8 +328,8 @@ footer .logo-studio {
 .team-description {
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
 }
 
 .team-title {
@@ -349,6 +364,10 @@ footer .logo-studio {
 /* -------------------портфолио кнопки----------------------------------*/
 
 /*фильтр*/
+.port-section {
+  padding: 94px 0;
+}
+
 .filter {
   display: flex;
   justify-content: center;
@@ -432,14 +451,17 @@ footer .logo-studio {
 }
 
 .work-blok {
-  padding-left: 24px;
+  padding: 20px 24px;
+  /* padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 20px; */
+  border: 1px solid #eeeeee;
+  border-top: none;
 
-  border-left: 1px solid #eeeeee;
+  /* border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee; */
 }
 
 .visually-hidden {
