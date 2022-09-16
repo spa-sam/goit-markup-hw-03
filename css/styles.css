@@ -35,6 +35,10 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
+img {
+  display: block;
+  max-width: 100%;
+}
 
 .list {
   margin: 0;
@@ -321,9 +325,9 @@ footer .logo-studio {
   background-color: var(--primary-white-color);
 }
 
-.team-img {
+/* .team-img {
   display: block;
-}
+} */
 
 .team-description {
   padding-top: 30px;
@@ -371,7 +375,7 @@ footer .logo-studio {
 .filter {
   display: flex;
   justify-content: center;
-  margin-top: 0;
+  /* margin-top: 0; */
   margin-bottom: 50px;
 }
 
@@ -408,9 +412,10 @@ footer .logo-studio {
 .work-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
-.work-item {
+/* .work-item {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
@@ -422,14 +427,14 @@ footer .logo-studio {
 
 .work-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
-}
+} */
 
-.work-img {
-  display: block;
-  max-width: 100%;
+/* .work-img {
+  display: block; 
+   max-width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-}
+} */
 
 .work-titel {
   margin-top: 0;
